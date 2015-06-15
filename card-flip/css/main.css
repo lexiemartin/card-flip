@@ -1,0 +1,36 @@
+body {
+	position: relative;
+}
+
+#portfolio {
+	perspective: 1000;
+}
+
+.portfolio-item {
+	position: relative;
+	transform-style: preserve-3d; 
+	transition: all 1.0s linear;
+	width: 200px;
+}
+
+.portfolio-item:hover {
+	transform: rotateY(180deg);
+}
+
+.front {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	backface-visibility: hidden;
+
+}
+
+.back {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	transform: rotateY(180deg);
+	backface-visibility: visible;
+}
+
+
